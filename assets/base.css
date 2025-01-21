@@ -3759,7 +3759,7 @@ body.popupactive {
 .color-label {
     text-align: left;
   flex-grow: 1;
-  font-size: 14px;
+  font-size: 18px;
       padding-left: 10px;
        font-family: 'Jost-regular';
     color: #000;
