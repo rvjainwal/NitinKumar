@@ -94,11 +94,14 @@
     font-style: normal;
     font-display: swap;
 }
-
-
-
-
-
+@font-face {
+    font-family: 'Jost-Regular';
+    src: url('https://cdn.shopify.com/s/files/1/0918/0427/0878/files/Jost-Regular.woff2?v=1737451200') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0918/0427/0878/files/Jost-Regular.woff?v=1737451200') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 /* Josh font family add here  */
