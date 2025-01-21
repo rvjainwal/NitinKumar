@@ -375,5 +375,34 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const colorBoxes = document.querySelectorAll('.color-box'); // Select all color boxes
+  const section = document.querySelector('.popup-product-colors'); // Select the section
+
+  colorBoxes.forEach((box) => {
+    box.addEventListener('click', function () {
+      // Remove the 'selected' class from previously selected color boxes
+      colorBoxes.forEach((b) => b.classList.remove('selected'));
+
+      // Add the 'selected' class to the clicked box
+      this.classList.add('selected');
+
+      // Set the background of the section to black
+      section.style.backgroundColor = 'black';
+    });
+  });
+});
+
+</script>
+
+
+    
   </body>
 </html>
