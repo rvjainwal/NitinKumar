@@ -14,7 +14,7 @@
 
     <div class="image-container">
       {% if blocks.settings.image %}
-<img src="{{ blocks.settings.image | image_url }}" alt="Grid Image" height="auto" width="auto" data-popup-id="popup-{{ blocks.id }}">
+<img src="{{ blocks.settings.image | image_url }}" alt="Grid Image" height="auto" width="auto" data-popup-id="popup-{{ blocks.id }}" class="popup-trigger">
       
       {% endif %}
 
