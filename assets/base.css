@@ -3740,10 +3740,10 @@ body.popupactive {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
-  padding: 5px 10px;
+  padding: 5px 10px 5px 0px;
   border-radius: 4px;
   cursor: pointer;
-  min-width: 80px;
+  min-width: 50%;
   justify-content: space-between;
 }
 
