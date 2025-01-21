@@ -8,6 +8,8 @@
   <div class="Custom-grid-section">
 <div class="Grid-layout">
     {% for blocks in section.blocks %}
+        {% if blocks.settings.selected_product %}
+    {% assign product = all_products[blocks.settings.selected_product] %}
 <div class="Grid-image">
 
     <div class="image-container">
@@ -28,8 +30,7 @@
       <path d="M5.03784 13.4285L13.5231 4.94325" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
     </svg>
   </div>
-  {% if blocks.settings.selected_product %}
-    {% assign product = all_products[blocks.settings.selected_product] %}
+
     <form action="/cart/add" method="post" id="product-form">
       <div class="popup-first-section">
         <div class="popup-image">
@@ -134,12 +135,13 @@
         });
       });
     </script>
-  {% endif %}
+ 
 </div>
 
   <!-- popup section -->
       
 </div>
+ {% endif %}
 {% endfor %}
 
 
