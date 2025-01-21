@@ -92,8 +92,69 @@
         "grid_NhJLdi": {
           "type": "Grid",
           "settings": {
+            "image": "shopify://shop_images/image_823.jpg",
             "heading": "Image slide",
-            "selected_product": "",
+            "selected_product": "blue-silk-tuxedo",
+            "enable_popup": false,
+            "link_url": ""
+          }
+        },
+        "grid_cUpnpW": {
+          "type": "Grid",
+          "settings": {
+            "image": "shopify://shop_images/image_824.jpg",
+            "heading": "Image slide",
+            "selected_product": "chequered-red-shirt",
+            "enable_popup": false,
+            "link_url": ""
+          }
+        },
+        "grid_DnxCRj": {
+          "type": "Grid",
+          "settings": {
+            "image": "shopify://shop_images/image_825.jpg",
+            "heading": "Image slide",
+            "selected_product": "classic-leather-jacket",
+            "enable_popup": false,
+            "link_url": ""
+          }
+        },
+        "grid_nH9b8j": {
+          "type": "Grid",
+          "settings": {
+            "image": "shopify://shop_images/image_826.jpg",
+            "heading": "Image slide",
+            "selected_product": "classic-varsity-top",
+            "enable_popup": false,
+            "link_url": ""
+          }
+        },
+        "grid_WjH6fT": {
+          "type": "Grid",
+          "settings": {
+            "image": "shopify://shop_images/image_827.jpg",
+            "heading": "Image slide",
+            "selected_product": "dark-denim-top",
+            "enable_popup": false,
+            "link_url": ""
+          }
+        },
+        "grid_DFNkpa": {
+          "type": "Grid",
+          "settings": {
+            "image": "shopify://shop_images/image_828.jpg",
+            "heading": "Image slide",
+            "selected_product": "floral-white-top",
+            "enable_popup": false,
+            "link_url": ""
+          }
+        },
+        "grid_tJiTFY": {
+          "type": "Grid",
+          "settings": {
+            "image": "shopify://shop_images/image_829.jpg",
+            "heading": "Image slide",
+            "selected_product": "led-high-tops",
             "enable_popup": false,
             "link_url": ""
           }
@@ -101,7 +162,13 @@
       },
       "block_order": [
         "grid_dcHxjK",
-        "grid_NhJLdi"
+        "grid_NhJLdi",
+        "grid_cUpnpW",
+        "grid_DnxCRj",
+        "grid_nH9b8j",
+        "grid_WjH6fT",
+        "grid_DFNkpa",
+        "grid_tJiTFY"
       ],
       "settings": {
         "grid_title": "Custom Grid Title"
