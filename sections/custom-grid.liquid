@@ -48,7 +48,7 @@
   {% for option in product.options_with_values %}
     {% if option.name == "Color" %}     
         {% for value in option.values %}
-          <p>{{ value }}</p>
+          <p style>{{ value }}</p>
         {% endfor %}
             {% endif %}
         {% endfor %}

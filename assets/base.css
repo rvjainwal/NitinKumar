@@ -3703,4 +3703,8 @@ body.popupactive {
   color: #000;
   font-weight: 300;
 }
+.color-option p {
+    height: 41px;
+    border: .5px solid #000;
+}
 /* Custom css work here end*/
