@@ -3817,6 +3817,10 @@ body.popupactive {
          font-family: 'Jost-regular';
   font-weight: 400;
   font-size: 16px;
+  border: none;
+}
+.Popup-product-button {
+border: none;
 }
 
 /* Custom css work here end*/
