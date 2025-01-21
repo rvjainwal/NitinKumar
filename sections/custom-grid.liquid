@@ -22,85 +22,98 @@
 
     <!-- popup section -->
     
-       <div class="Popup-section" id="popup">
+   <div class="Popup-section" id="popup">
   <div class="close" id="close-btn">
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5.03784 4.94354L13.5231 13.4288" stroke="black" stroke-width="1.5" stroke-linecap="square"
-        stroke-linejoin="round" />
-      <path d="M5.03784 13.4285L13.5231 4.94325" stroke="black" stroke-width="1.5" stroke-linecap="square"
-        stroke-linejoin="round" />
+      <path d="M5.03784 4.94354L13.5231 13.4288" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+      <path d="M5.03784 13.4285L13.5231 4.94325" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
     </svg>
   </div>
   {% if blocks.settings.selected_product %}
-  {% assign product = all_products[blocks.settings.selected_product] %}
-  <div class="popup-first-section">
-    <div class="popup-image">
-      <img src="{{ product.featured_image | img_url: 'large' }}" height="140" width="120">
-    </div>
-    <div class="popup-second-section">
-      <div class="popup-product-title">
-        <h4>{{ product.title }}</h4>
+    {% assign product = all_products[blocks.settings.selected_product] %}
+    <form action="/cart/add" method="post" id="product-form">
+      <div class="popup-first-section">
+        <div class="popup-image">
+          <img src="{{ product.featured_image | img_url: 'large' }}" height="140" width="120">
+        </div>
+        <div class="popup-second-section">
+          <div class="popup-product-title">
+            <h4>{{ product.title }}</h4>
+          </div>
+          <div class="popup-product-price">
+            <p>{{ product.price | money }}</p>
+          </div>
+          <div class="popup-product-description">
+            <p>{{ product.description }}</p>
+          </div>
+        </div>
       </div>
-      <div class="popup-product-price">
-        <p>{{ product.price | money }}</p>
+
+      <div class="popup-product-colors">
+        <p>Color</p>
+        <div class="color-container">
+          {% if product.variants.size > 1 %}
+            {% for option in product.options_with_values %}
+              {% if option.name == "Color" %}
+                {% for value in option.values %}
+                  <div class="color-box" data-color="{{ value | downcase }}">
+                    <span class="color-indicator" style="background-color: {{ value | downcase }}"></span>
+                    <span class="color-label">{{ value }}</span>
+                    <input type="radio" name="properties[Color]" value="{{ value }}" class="color-radio" style="display:none;">
+                  </div>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
       </div>
-      <div class="popup-product-description">
-        <p>{{ product.description }}</p>
+
+      <div class="dropdown-container">
+        <p for="product-size" class="dropdown-label">Size</p>
+        <div class="dropdown">
+          <select id="product-size" name="properties[Size]" class="dropdown-select">
+            {% if product.variants.size > 2 %}
+              {% for option in product.options_with_values %}
+                {% if option.name == "Size" %}
+                  <option value="" disabled selected>Choose your size</option>
+                  {% for value in option.values %}
+                    <option value="{{ value }}">{{ value }}</option>
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <option value="" disabled selected>No size options available</option>
+            {% endif %}
+          </select>
+          <div class="dropdown-icon">
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L8 8L14 2" stroke="black" stroke-width="1.5" stroke-linecap="square" />
+            </svg>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-<div class="popup-product-colors">
-  <p>Color</p>
-  <div class="color-container">
-    {% if product.variants.size > 1 %}
-    {% for option in product.options_with_values %}
-    {% if option.name == "Color" %}
-    {% for value in option.values %}
-    <div class="color-box" data-color="{{ value | downcase }}">
-      <span class="color-indicator" style="background-color: {{ value | downcase }}"></span>
-      <span class="color-label">{{ value }}</span>
-    </div>
-    {% endfor %}
-    {% endif %}
-    {% endfor %}
-    {% endif %}
-  </div>
-</div>
-
-
-  <div class="dropdown-container">
-    <p for="product-color" class="dropdown-label">Size</p>
-    <div class="dropdown">
-      <select id="product-color" name="product_color" class="dropdown-select">
-        {% if product.variants.size > 2 %}
-        {% for option in product.options_with_values %}
-        {% if option.name == "Size" %}
-        <option value="" disabled selected>Choose your size</option>
-        {% for value in option.values %}
-        <option value="{{ value }}">{{ value }}</option>
-        {% endfor %}
-        {% endif %}
-        {% endfor %}
-        {% else %}
-        <option value="" disabled selected>No size options available</option>
-        {% endif %}
-      </select>
-      <div class="dropdown-icon">
-        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 2L8 8L14 2" stroke="black" stroke-width="1.5" stroke-linecap="square" />
-        </svg>
+      <div class="Popup-product-button">
+        <button type="submit">ADD TO CART</button>
       </div>
-    </div>
-  </div>
+    </form>
 
-  <div class="Popup-product-button">
-    <button>ADD TO CART</button>
-  </div>
-
+    <script>
+      // Allow color selection
+      document.querySelectorAll('.color-box').forEach(function(colorBox) {
+        colorBox.addEventListener('click', function() {
+          document.querySelectorAll('.color-box').forEach(function(box) {
+            box.classList.remove('selected');
+            box.querySelector('input').checked = false;
+          });
+          colorBox.classList.add('selected');
+          colorBox.querySelector('input').checked = true;
+        });
+      });
+    </script>
   {% endif %}
-
 </div>
+
   <!-- popup section -->
 
 
