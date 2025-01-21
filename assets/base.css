@@ -3660,5 +3660,10 @@ body.popupactive {
 .popup-product-title h4 {
     margin-top: 0px;
 }
+.popup-product-title h4 {
+  font-family: 'Jost';
+  font-size: 16px;
+  line-height: 19.2px;
+}
 
 /* Custom css work here end*/
