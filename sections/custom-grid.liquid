@@ -23,8 +23,9 @@
   <div class="Popup-section">
         {% if blocks.settings.selected_product %}
               {% assign product = all_products[blocks.settings.selected_product] %}
+          <div class="popup-first-section">
     <div class="popup-image">
-      <img src="{{ product.featured_image | img_url: 'medium' }}" height="140" width="120">
+      <img src="{{ product.featured_image | img_url: 'large' }}" height="140" width="120">
     </div>
           <div class="popup-product-title">
           <h4>{{ product.title }}</h4>
@@ -34,6 +35,7 @@
           </div>
           <div class="popup-product-description">
             <p>{{ product.description }}</p>
+          </div>
           </div>
           <div class="popup-product-colors">
             <p>Select a Color</p>        
