@@ -3733,7 +3733,6 @@ body.popupactive {
 
 .color-container {
   display: flex;
-  gap: 10px;
 }
 
 .color-box {
