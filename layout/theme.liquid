@@ -407,21 +407,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-    <!-- close button js -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const closeButton = document.getElementById('close-btn');
-    const popup = document.getElementById('popup');
-
-    // Add event listener to close button
-    closeButton.addEventListener('click', function () {
-      popup.classList.add('hidden');  // Adds the 'hidden' class to hide the popup
+    <script>
+      <script>
+  // Add event listener to main images
+  document.querySelectorAll('.grid-image').forEach(function(image) {
+    image.addEventListener('click', function() {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'block'; // Show the popup
     });
+  });
+
+  // Add event listener to the close button
+  document.getElementById('close-btn').addEventListener('click', function() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none'; // Hide the popup
+  });
+
+  // Optional: Close the popup when clicking outside of it
+  window.addEventListener('click', function(event) {
+    const popup = document.getElementById('popup');
+    if (event.target === popup) {
+      popup.style.display = 'none';
+    }
   });
 </script>
 
-
-     <!-- close button js -->  
+    </script>
 
     
   </body>
