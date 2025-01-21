@@ -3824,6 +3824,7 @@ border: none;
 }
 .dropdown-container {
   display: inline-block;
+  width: 100%;
 }
 
 .dropdown-label {
