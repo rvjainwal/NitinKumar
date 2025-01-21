@@ -3606,7 +3606,6 @@ details-disclosure > details {
     right: 0;
     left: 0;
     width: 500px;
-    transform: translateY(-50%);
   display: none;
 }
 .popup-overlay.active {
