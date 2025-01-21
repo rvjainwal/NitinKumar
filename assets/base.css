@@ -3913,5 +3913,8 @@ background-color: #000;
 .color-label {
   font-size: 14px;
 }
+.image-container {
+    width: 33.33%;
+}
 
 /* Custom css work here end*/
