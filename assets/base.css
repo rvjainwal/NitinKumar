@@ -3867,8 +3867,14 @@ border: none;
   outline-offset: none !important;
   box-shadow: none !important;
 }
+.close svg {
+    float: inline-end;
+    margin-right: 15px;
+    align-content: center;
+}
 .close {
     height: 25px;
+    align-content: center;
 }
 
 /* Custom css work here end*/
