@@ -43,7 +43,7 @@
             <p>Color</p>        
    {% for variant in product.variants %}
       {% if variant.option1 and color_options != variant.option2 %}
-            <p value="{{ product.id }}">{{ variant.option2 }}</p>
+            <p value="{{ product.id }}">{{ product.option2 }}</p>
          {% assign color_options = color_options | append: variant.option1 %}
           {% endif %}
         {% endfor %}
