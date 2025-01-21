@@ -12,29 +12,44 @@
 {% schema %}
 {
 "name": "Section name",
-"settings": [
-     {
-      "type": "select",
-      "id": "layout",
-      "options": [
+
+  "blocks": [
+    {
+      "type": "Grid",
+      "name": "t:sections.slideshow.blocks.slide.name",
+      "limit": 50,
+      "settings": [
         {
-          "value": "full_bleed",
-          "label": "t:sections.slideshow.settings.layout.options__1.label"
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
         },
         {
-          "value": "grid",
-          "label": "t:sections.slideshow.settings.layout.options__2.label"
-        }
-      ],
-      "default": "full_bleed",
-      "label": "t:sections.slideshow.settings.layout.label"
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "t:sections.slideshow.blocks.slide.settings.heading.default",
+          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+        },
+       
+        
+        
+  
+      ]
     }
-],
-"presets": [
-{
-"name": "Custom Grid",
+  ],
+  "presets": [
+    {
+      "name": "Custom Grid",
+      "blocks": [
+        {
+          "type": "Grid"
+        },
+        {
+          "type": "Grid"
+        }
+      ]
+    }
+  ]
 
-}
-]
 }
 {% endschema %}
