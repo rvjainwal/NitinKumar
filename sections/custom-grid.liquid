@@ -40,8 +40,7 @@
               </div>
           </div>
 
-           {% if product.variants.size > 1 %}
-    {% for option in product.options_with_values %}
+          
   <div class="options">
   <div>{{ option.name }}</div>
       <select class="product-variants {{ option.name | handleize }} option-{{option.position}}" data-url="{{ product.url }}">
@@ -50,19 +49,19 @@
         {% endfor %}
       </select>
   </div>
-    {% endfor %}
-  {% endif %}
 
-          
+
+           {% if product.variants.size > 1 %}
+    {% for option in product.options_with_values %}
           <div class="popup-product-colors">
             <p>Color</p>        
-        {% for product in product.variants %}
-          {% if product.option2 %}
-            <p value="{{ variant.id }}">{{ product.option2 }}</p>
-          {% endif %}
-        {% endfor %}
-
+     {% for value in option.values %}
+            <p value="{{ variant.id }}">{{ option.value }}</p>
+       {% endfor %}
           </div>
+        {% endfor %}
+ {% endif %}
+         
 
             <div class="popup-product-size">
               <p>Select a Size</p>
