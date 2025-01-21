@@ -3916,5 +3916,8 @@ background-color: #000;
 .image-container {
     width: 33.33%;
 }
+.image-container img {
+  width: 100%;
+}
 
 /* Custom css work here end*/
