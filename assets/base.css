@@ -3851,6 +3851,7 @@ border: none;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  height: 41px;
 }
 
 .dropdown-icon {
