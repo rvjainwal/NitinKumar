@@ -408,7 +408,33 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-  
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Add event listeners to all images
+    document.querySelectorAll('.popup-trigger').forEach(function (image) {
+      image.addEventListener('click', function () {
+        // Get the corresponding popup ID from the data attribute
+        const popupId = image.getAttribute('data-popup-id');
+        
+        // Hide all other popups
+        document.querySelectorAll('.Popup-section').forEach(function (popup) {
+          popup.style.display = 'none';
+        });
+        
+        // Show the selected popup
+        document.getElementById(popupId).style.display = 'block';
+      });
+    });
+
+    // Add event listeners to close buttons
+    document.querySelectorAll('.Popup-section .close').forEach(function (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        // Hide the parent popup
+        closeBtn.closest('.Popup-section').style.display = 'none';
+      });
+    });
+  });
+</script>
 
   
 
