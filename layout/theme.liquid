@@ -404,18 +404,27 @@ colorBoxes.forEach((box) => {
 </script>
     <!-- close button js -->
 <script>
-  // Wait for the document to be fully loaded before executing the JavaScript
   document.addEventListener('DOMContentLoaded', function() {
+    console.log("Script Loaded");
+
+    // Get the popup and close button elements
     const popup = document.getElementById('popup');
     const closeBtn = document.getElementById('close-btn');
 
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function() {
-        popup.style.display = 'none'; // Hide the popup when the close button is clicked
-      });
-    } else {
-      console.error("Close button not found!");
+    // Check if popup and close button are correctly selected
+    if (!popup) {
+      console.error("Popup element not found");
     }
+
+    if (!closeBtn) {
+      console.error("Close button not found");
+    }
+
+    // Add event listener for close button
+    closeBtn?.addEventListener('click', function() {
+      console.log("Close button clicked");
+      popup.style.display = 'none'; // Hide the popup when close button is clicked
+    });
   });
 </script>
      <!-- close button js -->  
