@@ -3907,7 +3907,7 @@ background-color: #000;
   }
 }
 .color-box.animate {
-  animation: left-right 0.4s ease;
+  animation: left-right 0.9s ease;
 }
 .color-label {
   font-size: 14px;
