@@ -7,7 +7,9 @@
 
   <div class="Custom-grid-section">
 <div class="Grid-layout">
-  
+  <div class="Grid-image">
+<img src="{{ block.settings.image | image_url }}" alt="" height="auto" width="auto">
+  </div>
 </div>
   </div>
     
@@ -37,7 +39,7 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+          "label": "Select Image"
         },
         {
           "type": "inline_richtext",
