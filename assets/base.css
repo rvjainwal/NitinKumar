@@ -3667,5 +3667,8 @@ body.popupactive {
   color: #000;
   font-weight: 300;
 }
+.popup-second-section {
+    padding-left: 10px;
+}
 
 /* Custom css work here end*/
