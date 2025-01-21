@@ -3904,6 +3904,9 @@ border: none;
 background-color: #000;
   color: #fff;
 }
+.color-box.selected span.color-label {
+  color: #fff;
+}
 
 .color-indicator {
   width: 20px;
