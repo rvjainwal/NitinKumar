@@ -3681,5 +3681,12 @@ body.popupactive {
 .popup-second-section {
     padding-left: 10px;
 }
+.popup-product-price p {
+  font-family: 'Lustria';
+    font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  font-weight: 400;
+}
 
 /* Custom css work here end*/
