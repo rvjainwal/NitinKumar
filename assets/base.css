@@ -3713,6 +3713,7 @@ body.popupactive {
   font-size: 18px;
   line-height: 18px;
   color: #000;
+  font-weight: 400;
 }
 .color-option {
     display: flex;
