@@ -3695,5 +3695,7 @@ body.popupactive {
   color: #000;
   font-weight: 300;
 }
-
+.popup-product-colors p {
+  margin-top: 0px;
+}
 /* Custom css work here end*/
