@@ -43,7 +43,7 @@
              <select id="product-color" name="product_color">
         {% for variant in product.variants %}
           {% if variant.option1 %}
-            <option value="{{ variant.id }}">{{ variant.option1 }}</option>
+            <option value="{{ variant.id }}">{{ variant.option2 }}</option>
           {% endif %}
         {% endfor %}
       </select>
