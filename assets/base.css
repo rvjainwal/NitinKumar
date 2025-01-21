@@ -3739,7 +3739,7 @@ body.popupactive {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
-  padding: 5px 10px 5px 0px;
+  padding: 0px 10px 0px 0px;
   border-radius: 4px;
   cursor: pointer;
   min-width: 50%;
