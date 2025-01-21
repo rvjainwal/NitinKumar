@@ -36,6 +36,31 @@
           <div class="popup-product-description">
             <p>{{ product.description }}</p>
           </div>
+          <div class="popup-product-colors">
+            <p>Select a Color</p>
+            <label for="product-color">Select Color</label>
+            <option>
+             <select id="product-color" name="product_color">
+        {% for variant in product.variants %}
+          {% if variant.option1 %}
+            <option value="{{ variant.id }}">{{ variant.option1 }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+            </option>
+          </div>
+
+            <div class="popup-product-size">
+              <p>Select a Size</p>
+               <label for="product-color">Choose your color</label>
+        <select id="product-color" name="product_color">
+          {% for variant in product.variants %}
+            {% if variant.option1 %}
+              <option value="{{ variant.id }}">{{ variant.option1 }}</option>
+            {% endif %}
+          {% endfor %}
+        </select>
+            </div>
           
           {% endif %}
     
