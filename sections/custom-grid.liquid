@@ -21,8 +21,7 @@
 </div>
 
     <!-- popup section -->
-    
-   <div class="Popup-section" id="popup">
+<div class="Popup-section" id="popup">
   <div class="close" id="close-btn">
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M5.03784 4.94354L13.5231 13.4288" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
@@ -96,6 +95,9 @@
       <div class="Popup-product-button">
         <button type="submit">ADD TO CART</button>
       </div>
+
+      <input type="hidden" name="id" id="variant-id" value="{{ product.variants.first.id }}">
+      <input type="hidden" name="quantity" value="1">
     </form>
 
     <script>
@@ -110,9 +112,32 @@
           colorBox.querySelector('input').checked = true;
         });
       });
+
+      // Update variant ID when size or color is selected
+      document.querySelectorAll('input[name="properties[Color]"], select[name="properties[Size]"]').forEach(function(input) {
+        input.addEventListener('change', function() {
+          var color = document.querySelector('input[name="properties[Color]"]:checked');
+          var size = document.querySelector('select[name="properties[Size]"]').value;
+          
+          // Update the variant id based on selected options (size + color)
+          var variantId = null;
+          {% for variant in product.variants %}
+            {% if variant.option1 == "Color" and variant.option2 == "Size" %}
+              if ("{{ variant.option1 }}" == color.value && "{{ variant.option2 }}" == size) {
+                variantId = {{ variant.id }};
+              }
+              {% endif %}}
+            {% endfor %}
+          
+          // Set the correct variant id
+          document.getElementById('variant-id').value = variantId;
+        });
+      });
     </script>
   {% endif %}
 </div>
+
+
 
   <!-- popup section -->
 
