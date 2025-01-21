@@ -3625,8 +3625,10 @@ body.popupactive {
   overflow: hidden;
 }
 .popup-first-section {
-    display: flex
-;
+    display: flex;
+}
+.popup-product-title h4 {
+    margin-top: 0px;
 }
 
 /* Custom css work here end*/
