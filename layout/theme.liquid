@@ -408,17 +408,18 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
     <!-- close button js -->
-  <script>
+<script>
   document.addEventListener('DOMContentLoaded', function () {
     const closeButton = document.getElementById('close-btn');
     const popup = document.getElementById('popup');
 
     // Add event listener to close button
     closeButton.addEventListener('click', function () {
-      popup.style.display = 'none';  // Hides the popup
+      popup.classList.add('hidden');  // Adds the 'hidden' class to hide the popup
     });
   });
 </script>
+
 
      <!-- close button js -->  
 
