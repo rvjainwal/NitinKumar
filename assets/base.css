@@ -3750,7 +3750,7 @@ body.popupactive {
 .color-indicator {
   display: inline-block;
   width: 10px;
-  height: 20px;
+  height: 100%;
   margin-right: 0px;
   border-radius: 2px;
 }
