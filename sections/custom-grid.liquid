@@ -59,22 +59,31 @@
 
       </div>
 
-         
-<div class="popup-product-color">
-  <p>Select a Color</p>
-  <label for="product-color">Choose your Size</label>
-  <select id="product-color" name="product_color" placeholder="Choose your color">
-     {% if product.variants.size > 2 %}
-    {% for option in product.options_with_values %}
-      {% if option.name == "Size" %}
-          {% for value in option.values %}
-        <option value="{{ value }}">{{ value }}</option>
-     {% endfor %}
-                {% endif %}
-    {% endfor %}
-  {% endif %}
-  </select>
+<div class="dropdown-container">
+  <label for="product-color" class="dropdown-label">Size</label>
+  <div class="dropdown">
+    <select id="product-color" name="product_color" class="dropdown-select">
+      {% if product.variants.size > 2 %}
+        {% for option in product.options_with_values %}
+          {% if option.name == "Size" %}
+            <option value="" disabled selected>Choose your size</option>
+            {% for value in option.values %}
+              <option value="{{ value }}">{{ value }}</option>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <option value="" disabled selected>No size options available</option>
+      {% endif %}
+    </select>
+    <div class="dropdown-icon">
+      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L8 8L14 2" stroke="black" stroke-width="1.5" stroke-linecap="square"/>
+      </svg>
+    </div>
+  </div>
 </div>
+
 
 
 
