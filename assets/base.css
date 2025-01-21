@@ -3867,5 +3867,8 @@ border: none;
   outline-offset: none !important;
   box-shadow: none !important;
 }
+.close {
+    height: 25px;
+}
 
 /* Custom css work here end*/
