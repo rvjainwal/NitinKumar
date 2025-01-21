@@ -3624,5 +3624,9 @@ details-disclosure > details {
 body.popupactive {
   overflow: hidden;
 }
+.popup-first-section {
+    display: flex
+;
+}
 
 /* Custom css work here end*/
