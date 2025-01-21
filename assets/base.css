@@ -3799,7 +3799,11 @@ body.popupactive {
   outline: none;
   border-color: #000;
 }
-
+.popup-product-color select:focus-visible {
+  outline: none;
+  outline-offset: none;
+  box-shadow: none;
+}
 
 
 /* Custom css work here end*/
