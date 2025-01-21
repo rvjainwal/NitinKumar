@@ -3714,6 +3714,7 @@ body.popupactive {
   line-height: 18px;
   color: #000;
   font-weight: 400;
+  padding-left: 10px;
 }
 .color-option {
     display: flex;
