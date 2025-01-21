@@ -9,11 +9,28 @@
 <div class="Grid-layout">
 <div class="Grid-image">
   {% for block in section.blocks %}
-    {% if block.settings.image %}
-      <img src="{{ block.settings.image | image_url }}" alt="Grid Image" height="auto" width="auto">
-    {% endif %}
+    <div class="image-container">
+      {% if block.settings.image %}
+<img src="{{ block.settings.image | image_url }}" alt="Grid Image" height="auto" width="auto">
+      {% else %}
+        <p>No image selected</p>
+      {% endif %}
+
+      {% if block.settings.selected_product %}
+        {% assign product = all_products[block.settings.selected_product] %}
+        {% if product %}
+          <div class="product-image">
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" height="auto" width="auto">
+          </div>
+          <a href="{{ product.url }}" class="product-link">{{ product.title }}</a>
+        {% else %}
+          <p>Product not found</p>
+        {% endif %}
+      {% endif %}
+    </div>
   {% endfor %}
 </div>
+
 
 </div>
   </div>
