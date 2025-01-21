@@ -383,28 +383,19 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const colorBoxes = document.querySelectorAll('.color-box'); // Select all color boxes
-  const section = document.querySelector('.popup-product-colors'); // Select the section
+  const colorBoxes = document.querySelectorAll('.color-box'); 
+  const section = document.querySelector('.popup-product-colors');
 
-  colorBoxes.forEach((box) => {
+colorBoxes.forEach((box) => {
     box.addEventListener('click', function () {
-      // Remove the 'selected' and 'animate' classes from all color boxes
       colorBoxes.forEach((b) => b.classList.remove('selected', 'animate'));
-
-      // Add the 'selected' class to the clicked box
-      this.classList.add('selected');
-
-      // Trigger the left-right shift animation by adding the 'animate' class
-      this.classList.add('animate');
-
-      // Set the background of the section to black
-      section.style.backgroundColor = 'black';
-
-      // Remove the 'animate' class after the animation ends to allow retriggering
-      this.addEventListener(
+ this.classList.add('selected');
+          this.classList.add('animate');
+      section.style.backgroundColor = 'black';=
+  this.addEventListener(
         'animationend',
         () => this.classList.remove('animate'),
-        { once: true } // Ensure the listener is executed only once
+{ once: true } 
       );
     });
   });
