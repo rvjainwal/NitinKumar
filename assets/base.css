@@ -3755,9 +3755,10 @@ body.popupactive {
 }
 
 .color-label {
-  text-align: center;
+    text-align: left;
   flex-grow: 1;
   font-size: 14px;
+      padding-left: 10px;
 }
 
 
