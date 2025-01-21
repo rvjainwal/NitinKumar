@@ -3901,8 +3901,20 @@ background-color: #000;
 .color-box.selected span.color-label {
   color: #fff;
 }
-
-
+@keyframes left-right {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.color-box.animate {
+  animation: left-right 0.4s ease;
+}
 .color-label {
   font-size: 14px;
 }
