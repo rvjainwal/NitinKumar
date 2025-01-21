@@ -3650,7 +3650,7 @@ details-disclosure > details {
     transform: translateY(-40%);
   margin: 0 auto;
   padding: 0 15px;
-
+display: none;
 }
 .popup-overlay.active {
       position: fixed;
