@@ -3706,5 +3706,13 @@ body.popupactive {
 .color-option p {
     height: 41px;
     border: .5px solid #000;
+      width: 50%;
 }
+.color-option {
+    display: flex;
+    width: 100%;
+}
+
+
+
 /* Custom css work here end*/
