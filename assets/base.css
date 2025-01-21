@@ -3936,4 +3936,7 @@ background-color: #000;
 #popup-overlay.active {
   display: block; /* Show overlay when active */
 }
+.image-container {
+  cursor: pointer;
+}
 /* Custom css work here end*/
