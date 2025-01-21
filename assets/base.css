@@ -3707,6 +3707,8 @@ body.popupactive {
     height: 41px;
     border: .5px solid #000;
       width: 50%;
+      margin-bottom: 0px;
+    align-content: center;
 }
 .color-option {
     display: flex;
