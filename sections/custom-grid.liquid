@@ -42,17 +42,19 @@
 
      <div class="popup-product-colors">
               <p>Color</p>
-{% if product.variants.size > 1 %}
-  {% for option in product.options_with_values %}
+
     <div class="color-option">
+          {% if product.variants.size > 1 %}
+  {% for option in product.options_with_values %}
     {% if option.name == "Color" %}     
         {% for value in option.values %}
           <p>{{ value }}</p>
         {% endfor %}
             {% endif %}
-      </div>
-  {% endfor %}
+        {% endfor %}
 {% endif %}
+      </div>
+
       </div>
 
          
