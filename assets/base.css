@@ -3875,6 +3875,7 @@ border: none;
     float: inline-end;
     margin-right: 15px;
     align-content: center;
+  cursor: pointer;
 }
 .close {
     height: 25px;
