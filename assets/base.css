@@ -3808,6 +3808,12 @@ body.popupactive {
   outline-offset: none !important;
   box-shadow: none !important;
 }
-
+.Popup-product-button button {
+    height: 45px;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    align-content: center;
+}
 
 /* Custom css work here end*/
