@@ -3697,11 +3697,11 @@ body.popupactive {
 }
 .popup-product-colors p {
   margin-top: 0px;
-      font-family: 'Jost';
+   font-family: 'Jost-regular';
   font-size: 14px;
   line-height: 18.2px;
   color: #000;
-  font-weight: 300;
+  font-weight: 400;
 }
 .color-option p {
     height: 41px;
