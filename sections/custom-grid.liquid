@@ -64,11 +64,15 @@
   <p>Select a Color</p>
   <label for="product-color">Choose your color</label>
   <select id="product-color" name="product_color" placeholder="Choose your color">
-    {% for variant in product.variants %}
-      {% if variant.option1 %}
-        <option value="{{ variant.id }}">{{ variant.option1 }}</option>
-      {% endif %}
+     {% if product.variants.size > 2 %}
+    {% for option in product.options_with_values %}
+      {% if option.name == "Color" %}
+          {% for value in option.values %}
+        <option value="{{ value }}">{{ value }}</option>
+     {% endfor %}
+                {% endif %}
     {% endfor %}
+  {% endif %}
   </select>
 </div>
 
