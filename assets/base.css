@@ -3909,7 +3909,7 @@ border: none;
 .color-indicator {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+  border-radius: 0%;
 }
 
 .color-label {
