@@ -41,7 +41,7 @@
           </div>
           <div class="popup-product-colors">
             <p>Color</p>        
-        {% for variant in product.variants %}
+        {% for product in product.variants %}
           {% if product.option2 %}
             <p value="{{ variant.id }}">{{ product.option2 }}</p>
           {% endif %}
