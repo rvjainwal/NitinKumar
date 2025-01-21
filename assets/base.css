@@ -103,8 +103,19 @@
     font-display: swap;
 }
 
-
 /* Josh font family add here  */
+
+/* Lusturia font family add here */
+@font-face {
+    font-family: 'Lustria';
+    src: url('Lustria-Regular.woff2') format('woff2'),
+        url('Lustria-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Lusturia font family add here */
 
 .page-width {
   max-width: var(--page-width);
