@@ -3646,7 +3646,7 @@ details-disclosure > details {
     top: 50%;
     right: 0;
     left: 0;
-    width: 500px;
+    width: 311px;
     transform: translateY(-20%);
   margin: 0 auto;
 
@@ -3687,6 +3687,13 @@ body.popupactive {
   line-height: 19.2px;
   color: #000;
   font-weight: 400;
+}
+.popup-product-description p {
+    font-family: 'Jost';
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  font-weight: 300;
 }
 
 /* Custom css work here end*/
