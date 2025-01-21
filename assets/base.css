@@ -3913,5 +3913,8 @@ background-color: #000;
 .color-label {
   font-size: 14px;
 }
+.Popup-section.hidden {
+  display: none;
+}
 
 /* Custom css work here end*/
