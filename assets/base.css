@@ -3705,7 +3705,9 @@ body.popupactive {
 }
 .color-option p {
     height: 41px;
-    border: .5px solid #000;
+    border-top: .5px solid #000;
+    border-bottom: .5px solid #000;
+    border-right: .5px solid #000;
       width: 50%;
       margin-bottom: 0px;
     align-content: center;
