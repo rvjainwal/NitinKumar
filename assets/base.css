@@ -3899,7 +3899,6 @@ border: none;
   transition: border-color 0.3s ease;
 }
 
-.color-box:hover,
 .color-box.selected {
 background-color: #000;
   color: #fff;
