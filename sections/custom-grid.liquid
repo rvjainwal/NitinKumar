@@ -11,8 +11,20 @@
 <!-- Welcome section ends -->
 {% schema %}
 {
-"name": "Section name",
-
+  "name": "Section name",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "product_collection",
+      "label": "t:sections.custom_grid.settings.product_collection.label"
+    },
+    {
+      "type": "text",
+      "id": "grid_title",
+      "label": "t:sections.custom_grid.settings.grid_title.label",
+      "default": "Custom Grid Title"
+    }
+  ],
   "blocks": [
     {
       "type": "Grid",
@@ -30,26 +42,25 @@
           "default": "t:sections.slideshow.blocks.slide.settings.heading.default",
           "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
         },
-       
-        
-        
-  
+        {
+          "type": "product",
+          "id": "selected_product",
+          "label": "t:sections.slideshow.blocks.slide.settings.selected_product.label"
+        }
       ]
     }
   ],
   "presets": [
     {
       "name": "Custom Grid",
+      "category": "Custom",
       "blocks": [
-        {
-          "type": "Grid"
-        },
         {
           "type": "Grid"
         }
       ]
     }
   ]
-
 }
 {% endschema %}
+
