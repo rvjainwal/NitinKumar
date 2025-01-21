@@ -3785,7 +3785,7 @@ body.popupactive {
   width: 100%;
   max-width: 300px;
   padding: 0px 10px;
-  border: 1px solid #ccc;
+  border: .5px solid #000;
   border-radius:0px;
   font-size: 16px;
   appearance: none;
