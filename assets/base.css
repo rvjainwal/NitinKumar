@@ -3881,8 +3881,6 @@ border: none;
     align-content: center;
 }
 .popup-product-colors {
-  padding: 20px;
-  border: 1px solid #ccc;
   transition: background-color 0.3s ease;
 }
 
