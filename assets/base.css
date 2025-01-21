@@ -3641,7 +3641,7 @@ details-disclosure > details {
 /* popup css */
 .Popup-section {
       position: absolute;
-    z-index: 999;
+    z-index: 99999;
     background: #fff;
     top: 50%;
     right: 0;
