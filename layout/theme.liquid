@@ -386,22 +386,27 @@ document.addEventListener('DOMContentLoaded', function () {
   const colorBoxes = document.querySelectorAll('.color-box'); 
   const section = document.querySelector('.popup-product-colors');
 
-colorBoxes.forEach((box) => {
+  colorBoxes.forEach((box) => {
     box.addEventListener('click', function () {
+      // Remove the 'selected' and 'animate' classes from all color boxes
       colorBoxes.forEach((b) => b.classList.remove('selected', 'animate'));
- this.classList.add('selected');
-          this.classList.add('animate');
-      section.style.backgroundColor = 'black';=
-  this.addEventListener(
-        'animationend',
-        () => this.classList.remove('animate'),
-{ once: true } 
-      );
+
+      // Add 'selected' and 'animate' classes to the clicked color box
+      this.classList.add('selected');
+      this.classList.add('animate');
+
+      // Change the background color of the section to the selected color
+      section.style.backgroundColor = this.getAttribute('data-color');
+
+      // Remove 'animate' class after animation ends
+      this.addEventListener('animationend', () => {
+        this.classList.remove('animate');
+      }, { once: true });
     });
   });
 });
-
 </script>
+
     <!-- close button js -->
 
      <!-- close button js -->  
