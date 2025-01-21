@@ -3690,8 +3690,8 @@ body.popupactive {
 }
 .popup-product-description p {
     font-family: 'Jost';
-  font-size: 16px;
-  line-height: 19.2px;
+  font-size: 14px;
+  line-height: 15.2px;
   color: #000;
   font-weight: 300;
 }
