@@ -3919,5 +3919,8 @@ background-color: #000;
 .image-container img {
   width: 100%;
 }
+.Popup-section.active {
+  display: block; /* Show popup when active */
+}
 
 /* Custom css work here end*/
