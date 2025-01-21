@@ -4,11 +4,11 @@
 <div class="Grid-heading">
 <h1>{{ section.settings.grid_title }}</h1>
 </div>
-
+  {% for blocks in section.blocks %}
   <div class="Custom-grid-section">
 <div class="Grid-layout">
 <div class="Grid-image">
-  {% for blocks in section.blocks %}
+
     <div class="image-container">
       {% if blocks.settings.image %}
 <img src="{{ blocks.settings.image | image_url }}" alt="Grid Image" height="auto" width="auto">
@@ -17,7 +17,7 @@
 
   
     </div>
-  {% endfor %}
+
 </div>
 
   <div class="Popup-section">
@@ -70,7 +70,7 @@
 </div>
   </div>
     
-  
+    {% endfor %}
 </div>
 </section>
 <!-- Welcome section ends -->
