@@ -3835,7 +3835,7 @@ border: none;
 
 .dropdown {
   position: relative;
-  width: 200px;
+  width: 100%;
 }
 
 .dropdown-select {
