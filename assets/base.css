@@ -3697,5 +3697,10 @@ body.popupactive {
 }
 .popup-product-colors p {
   margin-top: 0px;
+      font-family: 'Jost';
+  font-size: 14px;
+  line-height: 18.2px;
+  color: #000;
+  font-weight: 300;
 }
 /* Custom css work here end*/
