@@ -54,16 +54,18 @@
   {% endif %}
 
 
-           {% if product.variants.size > 1 %}
-    {% for option in product.options_with_values %}
-          <div class="popup-product-colors">
-            <p>Color</p>        
-     {% for value in option.values %}
-            <p value="{{ variant.id }}">{{ value }}</p>
-       {% endfor %}
-          </div>
+{% if product.variants.size > 1 %}
+  {% for option in product.options_with_values %}
+    {% if option.name == "Color" %}
+      <div class="popup-product-colors">
+        <p>Color</p>        
+        {% for value in option.values %}
+          <p>{{ value }}</p>
         {% endfor %}
- {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
          
 
             <div class="popup-product-size">
