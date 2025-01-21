@@ -39,6 +39,21 @@
           </div>
               </div>
           </div>
+
+           {% if product.variants.size > 1 %}
+    {% for option in product.options_with_values %}
+  <div class="options">
+  <div>{{ option.name }}</div>
+      <select class="product-variants {{ option.name | handleize }} option-{{option.position}}" data-url="{{ product.url }}">
+        {% for value in option.values %}
+          <option {% if option.selected_value == value %}selected{% endif %}>{{ value }}</option>
+        {% endfor %}
+      </select>
+  </div>
+    {% endfor %}
+  {% endif %}
+
+          
           <div class="popup-product-colors">
             <p>Color</p>        
         {% for product in product.variants %}
@@ -60,6 +75,7 @@
           {% endfor %}
         </select>
             </div>
+          
 
           <div class="Popup-product-button">
           <button>ADD TO CART</button>
