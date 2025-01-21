@@ -3822,5 +3822,39 @@ body.popupactive {
 .Popup-product-button {
 border: none;
 }
+.dropdown-container {
+  display: inline-block;
+}
+
+.dropdown-label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.dropdown {
+  position: relative;
+  width: 200px;
+}
+
+.dropdown-select {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
 
 /* Custom css work here end*/
