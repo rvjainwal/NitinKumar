@@ -8,28 +8,39 @@
   <div class="Custom-grid-section">
 <div class="Grid-layout">
 <div class="Grid-image">
-  {% for block in section.blocks %}
+  {% for blocks in section.blocks %}
     <div class="image-container">
-      {% if block.settings.image %}
-<img src="{{ block.settings.image | image_url }}" alt="Grid Image" height="auto" width="auto">
+      {% if blocks.settings.image %}
+<img src="{{ blocks.settings.image | image_url }}" alt="Grid Image" height="auto" width="auto">
       {% else %}
         <p>No image selected</p>
       {% endif %}
 
-      {% if block.settings.selected_product %}
-        {% assign product = all_products[block.settings.selected_product] %}
-        {% if product %}
-          <div class="product-image">
-            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" height="auto" width="auto">
-          </div>
-          <a href="{{ product.url }}" class="product-link">{{ product.title }}</a>
-        {% else %}
-          <p>Product not found</p>
-        {% endif %}
-      {% endif %}
+  
     </div>
   {% endfor %}
 </div>
+
+  <div class="Popup-section">
+        {% if blocks.settings.selected_product %}
+              {% assign product = all_products[blocks.settings.selected_product] %}
+    <div class="popup-image">
+      <img src="{{ product.featured_image | img_url: 'medium' }}" height="auto" width="auto">
+    </div>
+          <div class="popup-product-title">
+          <h4>{{ product.title }}</h4>
+          </div>
+          <div class="popup-product-price">
+             <p>{{ product.price }}</p>
+          </div>
+          <div class="popup-product-description">
+            <p>{{ product.description }}</p>
+          </div>
+          
+          {% endif %}
+    
+  </div>
+  
 
 
 </div>
