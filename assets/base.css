@@ -3902,11 +3902,6 @@ background-color: #000;
   color: #fff;
 }
 
-.color-indicator {
-  width: 20px;
-  height: 20px;
-  border-radius: 0%;
-}
 
 .color-label {
   font-size: 14px;
