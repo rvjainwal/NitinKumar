@@ -408,48 +408,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-      <script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Get all product images and popups
-  const images = document.querySelectorAll(".product-image");
-  const closeButtons = document.querySelectorAll(".close-btn");
-
-  // Show the corresponding popup when an image is clicked
-  images.forEach((image) => {
-    image.addEventListener("click", function () {
-      const popupId = this.getAttribute("data-popup-id");
-      const popup = document.getElementById(popupId);
-
-      if (popup) {
-        popup.classList.add("active"); // Show the popup
-        document.body.style.overflow = "hidden"; // Prevent background scrolling
-      }
-    });
-  });
-
-  // Close the popup when the close button is clicked
-  closeButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const popup = this.closest(".Popup-section");
-
-      if (popup) {
-        popup.classList.remove("active"); // Hide the popup
-        document.body.style.overflow = ""; // Re-enable background scrolling
-      }
-    });
-  });
-
-  // Optional: Close popup when clicking outside of it
-  document.addEventListener("click", function (e) {
-    if (e.target.classList.contains("Popup-section") && e.target.classList.contains("active")) {
-      e.target.classList.remove("active");
-      document.body.style.overflow = "";
-    }
-  });
-});
-
-
-</script>
+  
 
   
 
