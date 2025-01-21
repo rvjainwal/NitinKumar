@@ -3880,5 +3880,40 @@ border: none;
     height: 25px;
     align-content: center;
 }
+.popup-product-colors {
+  padding: 20px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.color-container {
+  display: flex;
+  gap: 10px;
+}
+
+.color-box {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.color-box:hover,
+.color-box.selected {
+  border-color: #000;
+}
+
+.color-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.color-label {
+  font-size: 14px;
+}
 
 /* Custom css work here end*/
