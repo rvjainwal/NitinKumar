@@ -76,6 +76,33 @@
 
 /* base */
 
+/* Josh font family add here  */
+
+@font-face {
+    font-family: 'Jost';
+    src: url('https://cdn.shopify.com/s/files/1/0918/0427/0878/files/Jost-Light.woff2?v=1737450803') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0918/0427/0878/files/Jost-Light.woff?v=1737450803') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Jost-Medium';
+    src: url('https://cdn.shopify.com/s/files/1/0918/0427/0878/files/Jost-Medium.woff2?v=1737450958') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0918/0427/0878/files/Jost-Medium.woff?v=1737450958') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
+
+/* Josh font family add here  */
+
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
