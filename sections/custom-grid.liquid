@@ -50,23 +50,24 @@
     </div>
   </div>
 
-  <div class="popup-product-colors">
-    <p>Color</p>
-    <div class="color-container">
-      {% if product.variants.size > 1 %}
-      {% for option in product.options_with_values %}
-      {% if option.name == "Color" %}
-      {% for value in option.values %}
-      <div class="color-box">
-        <span class="color-indicator" style="background-color: {{ value | downcase }}"></span>
-        <span class="color-label">{{ value }}</span>
-      </div>
-      {% endfor %}
-      {% endif %}
-      {% endfor %}
-      {% endif %}
+<div class="popup-product-colors">
+  <p>Color</p>
+  <div class="color-container">
+    {% if product.variants.size > 1 %}
+    {% for option in product.options_with_values %}
+    {% if option.name == "Color" %}
+    {% for value in option.values %}
+    <div class="color-box" data-color="{{ value | downcase }}">
+      <span class="color-indicator" style="background-color: {{ value | downcase }}"></span>
+      <span class="color-label">{{ value }}</span>
     </div>
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
   </div>
+</div>
+
 
   <div class="dropdown-container">
     <p for="product-color" class="dropdown-label">Size</p>
