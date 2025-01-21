@@ -84,15 +84,26 @@
           "settings": {
             "image": "shopify://shop_images/young-man-in-bright-fashion_925x_b3b7ebd6-c91f-496a-a516-45403497ea25.jpg",
             "heading": "Image slide",
-            "selected_product": "black-leather-bag"
+            "selected_product": "black-leather-bag",
+            "enable_popup": false,
+            "link_url": ""
+          }
+        },
+        "grid_NhJLdi": {
+          "type": "Grid",
+          "settings": {
+            "heading": "Image slide",
+            "selected_product": "",
+            "enable_popup": false,
+            "link_url": ""
           }
         }
       },
       "block_order": [
-        "grid_dcHxjK"
+        "grid_dcHxjK",
+        "grid_NhJLdi"
       ],
       "settings": {
-        "product_collection": "",
         "grid_title": "Custom Grid Title"
       }
     }
