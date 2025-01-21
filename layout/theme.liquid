@@ -404,14 +404,14 @@ colorBoxes.forEach((box) => {
 </script>
     <!-- close button js -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-  const closeButton = document.querySelector('.Popup-section .close');
-  const popupSection = document.querySelector('.Popup-section');
-  if (closeButton && popupSection) {
- closeButton.addEventListener('click', function() {
-      popupSection.style.display = 'none';
-    });}
-});
+  // Get the popup and close button elements
+  const popup = document.getElementById('popup');
+  const closeBtn = document.getElementById('close-btn');
+
+  // Add click event listener to close button
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none'; // Hide the popup
+  });
 </script>
      <!-- close button js -->  
 
