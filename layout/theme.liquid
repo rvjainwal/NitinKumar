@@ -410,29 +410,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
       <script>
  document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll(".Grid-image img");
-  const popup = document.getElementById("popup");
-  const closeBtn = document.getElementById("close-btn");
-  const overlay = document.createElement("div");
-  overlay.id = "popup-overlay";
-  document.body.appendChild(overlay);
+  const images = document.querySelectorAll(".product-image");
+  const popups = document.querySelectorAll(".Popup-section");
+  const closeButtons = document.querySelectorAll(".close-btn");
 
-  // Show popup on image click
+  // Show the corresponding popup when an image is clicked
   images.forEach((image) => {
     image.addEventListener("click", function () {
-      popup.classList.add("active");
-      overlay.classList.add("active");
+      const popupId = this.getAttribute("data-popup-id");
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.classList.add("active");
+      }
     });
   });
 
-  // Close popup on close button or overlay click
-  const closePopup = () => {
-    popup.classList.remove("active");
-    overlay.classList.remove("active");
-  };
-
-  closeBtn.addEventListener("click", closePopup);
-  overlay.addEventListener("click", closePopup);
+  // Close the popup when the close button is clicked
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      this.closest(".Popup-section").classList.remove("active");
+    });
+  });
 });
 
 </script>
