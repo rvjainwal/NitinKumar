@@ -87,7 +87,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'Jost-Medium';
+    font-family: 'Jost-medium';
     src: url('https://cdn.shopify.com/s/files/1/0918/0427/0878/files/Jost-Medium.woff2?v=1737450958') format('woff2'),
         url('https://cdn.shopify.com/s/files/1/0918/0427/0878/files/Jost-Medium.woff?v=1737450958') format('woff');
     font-weight: 500;
@@ -95,7 +95,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'Jost-Regular';
+    font-family: 'Jost-regular';
     src: url('https://cdn.shopify.com/s/files/1/0918/0427/0878/files/Jost-Regular.woff2?v=1737451200') format('woff2'),
         url('https://cdn.shopify.com/s/files/1/0918/0427/0878/files/Jost-Regular.woff?v=1737451200') format('woff');
     font-weight: normal;
