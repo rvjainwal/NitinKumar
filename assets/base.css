@@ -3744,6 +3744,7 @@ body.popupactive {
   cursor: pointer;
   min-width: 50%;
   justify-content: space-between;
+  height: 41px;
 }
 
 .color-indicator {
