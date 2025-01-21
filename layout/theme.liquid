@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Add the 'selected' class to the clicked box
       this.classList.add('selected');
 
-      // Trigger left-right shift animation by adding the 'animate' class
+      // Trigger the left-right shift animation by adding the 'animate' class
       this.classList.add('animate');
 
       // Set the background of the section to black
@@ -403,10 +403,8 @@ document.addEventListener('DOMContentLoaded', function () {
       // Remove the 'animate' class after the animation ends to allow retriggering
       this.addEventListener(
         'animationend',
-        () => {
-          this.classList.remove('animate');
-        },
-        { once: true } // Ensures the listener runs only once
+        () => this.classList.remove('animate'),
+        { once: true } // Ensure the listener is executed only once
       );
     });
   });
