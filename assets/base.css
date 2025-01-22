@@ -3940,4 +3940,14 @@ background-color: #000;
 .image-container {
   cursor: pointer;
 }
+.Grid-layout .Grid-image {
+    width: 33.33%;
+    padding: 0px 5px;
+}
+.Grid-layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -5px;
+
+}
 /* Custom css work here end*/
